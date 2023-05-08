@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>892</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>268</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>28</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Bstart-CAD模块</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>783</x>
+      <y>429</y>
+      <width>75</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="3,0">
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="placeholderText">
+        <string>轴承型号筛选</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>360</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>323</x>
+      <y>58</y>
+      <width>491</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>210</width>
+      <height>120</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>参数输入</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>28</x>
+       <y>100</y>
+       <width>52</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>轴承内径</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>100</y>
+       <width>149</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>95</string>
+     </property>
+     <property name="placeholderText">
+      <string>mm</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>28</x>
+       <y>130</y>
+       <width>52</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>轴承外径</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>130</y>
+       <width>149</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>170</string>
+     </property>
+     <property name="placeholderText">
+      <string>mm</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>52</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>轴承内径</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>68</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>P0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>P2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>P4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>P5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>P6</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_5">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>240</y>
+       <width>149</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>15</string>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>38</x>
+       <y>240</y>
+       <width>52</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>接触角</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_6">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>200</y>
+       <width>149</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>32</string>
+     </property>
+     <property name="placeholderText">
+      <string>mm</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>33</x>
+       <y>200</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>轴承宽度</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_7">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>60</y>
+       <width>149</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>7200</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>23</x>
+       <y>60</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>轴承名</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>430</y>
+      <width>75</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>出图</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>892</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>操作 (&amp;O)</string>
+    </property>
+    <addaction name="action1"/>
+   </widget>
+   <widget class="QMenu" name="menu_C">
+    <property name="title">
+     <string>选择轴承型号 (&amp;C)</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>深沟球轴承</string>
+     </property>
+     <addaction name="action1_3"/>
+     <addaction name="action2_2"/>
+    </widget>
+    <addaction name="action1_2"/>
+    <addaction name="menu_2"/>
+    <addaction name="action3"/>
+    <addaction name="action4"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_C"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action1">
+   <property name="text">
+    <string>新建窗口</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action1_2">
+   <property name="text">
+    <string>角接触球轴承</string>
+   </property>
+  </action>
+  <action name="action3">
+   <property name="text">
+    <string>圆柱滚子轴承</string>
+   </property>
+  </action>
+  <action name="action4">
+   <property name="text">
+    <string>圆锥滚子轴承</string>
+   </property>
+  </action>
+  <action name="action1_3">
+   <property name="text">
+    <string>轻系列轴承（619、618、160）</string>
+   </property>
+  </action>
+  <action name="action1_4">
+   <property name="text">
+    <string>测试使用</string>
+   </property>
+  </action>
+  <action name="action1_5">
+   <property name="text">
+    <string>堆叠测试</string>
+   </property>
+  </action>
+  <action name="action2_2">
+   <property name="text">
+    <string>深沟球轴承（0、1、2、3、4、）</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>comboBox</tabstop>
+  <tabstop>lineEdit_7</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>lineEdit_3</tabstop>
+  <tabstop>lineEdit_6</tabstop>
+  <tabstop>lineEdit_5</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>textEdit</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>listWidget</tabstop>
+  <tabstop>pushButton_2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,56 @@
+/* TAG QMenuBar */
+QMenuBar {
+    background-color: #d8d8d8;
+    width: 80px;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: purple;
+}
+
+QMenuBar::item {
+    /* spacing: 0px; */
+    margin-top: 1px;
+    margin-left: 1px;
+    padding: 6px 20px;
+    color: black;
+    background: transparent;
+    border-radius: 0px;
+    width: 65px;
+    height: 28px;
+    /* 与margin、padding关联并且QMenuBar设置固定高度28px */
+}
+
+
+QMenuBar::item:selected {
+    background-color: #90c8f6;
+}
+
+/* TAG QGroupBox */
+QGroupBox {
+    font-weight: bold;
+    font-size: 16px;
+    border-style: dashed;
+    border-color: saddlebrown;
+    border-width: px;
+    margin-top: 12px;
+}
+
+QGroupBox::title {
+    color: black;
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    left: 10px;
+
+}
+
+QGroupBox QLineEdit:hover {
+    border-color: red;
+    border-style: outset;
+    border-width: 1px;
+}
+
+
+/* TAG QLabel */
+QLabel#label_4 {
+    color: red;
+}
