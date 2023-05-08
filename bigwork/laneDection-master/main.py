@@ -27,9 +27,8 @@ def plot_contrast_image(origin_img, converted_img, origin_img_title="origin_img"
 # 相机校正：外参，内参，畸变系数
 def cal_calibrate_params(file_paths):
     # 存储角点数据的坐标
-    object_points = []  # 角点在三维空间的对未知
-    image_points = []  # 角点在图像空间中的位置
-    # 生成角点在真实世界中的位置
+    object_points = []  
+    image_points = []  
     objp = np.zeros((nx * ny, 3), np.float32)
     objp[:, :2] = np.mgrid[0:nx, 0:ny].T.reshape(-1, 2)
     # 角点检测
@@ -45,7 +44,6 @@ def cal_calibrate_params(file_paths):
         if rect == True:
             object_points.append(objp)
             image_points.append(coners)
-    # 相机较真
     ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(object_points, image_points, gray.shape[::-1], None, None)
     return ret, mtx, dist, rvecs, tvecs
 
