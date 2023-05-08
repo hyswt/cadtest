@@ -155,23 +155,23 @@ def cal_line_param(binary_warped):
         left_lane_inds.append(good_left_inds)
         right_lane_inds.append(good_right_inds)
 
-        # 如果获取的点的个数大于最小个数，则利用其更新滑动窗口在x轴的位置
+        
         if len(good_left_inds) > minpix:
             leftx_current = np.int(np.mean(nonzerox[good_left_inds]))
         if len(good_right_inds) > minpix:
             rightx_current = np.int(np.mean(nonzerox[good_right_inds]))
 
-    # 将检测出的左右车道点转换为array
+    
     left_lane_inds = np.concatenate(left_lane_inds)
     right_lane_inds = np.concatenate(right_lane_inds)
 
-    # 获取检测出的左右车道点在图像中的位置
+    
     leftx = nonzerox[left_lane_inds]
     lefty = nonzeroy[left_lane_inds]
     rightx = nonzerox[right_lane_inds]
     righty = nonzeroy[right_lane_inds]
 
-    # 3.用曲线拟合检测出的点,二次多项式拟合，返回的结果是系数
+    
     left_fit = np.polyfit(lefty, leftx, 2)
     right_fit = np.polyfit(righty, rightx, 2)
     return left_fit, right_fit
