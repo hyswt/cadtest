@@ -90,8 +90,7 @@ def pipeline(img, s_thresh=(170, 255), sx_thresh=(40, 200)):
     return color_binary
 
 
-# 透视变换
-# 获取透视变换的参数矩阵
+
 def cal_perspective_params(img, points):
     offset_x = 330
     offset_y = 0
@@ -107,7 +106,7 @@ def cal_perspective_params(img, points):
     return M, M_inverse
 
 
-# 根据参数矩阵完成透视变换
+
 def img_perspect_transform(img, M):
     img_size = (img.shape[1], img.shape[0])
     return cv2.warpPerspective(img, M, img_size)
@@ -115,11 +114,9 @@ def img_perspect_transform(img, M):
 
 # 精确定位车道线
 def cal_line_param(binary_warped):
-    # 1.确定左右车道线的位置
-    # 统计直方图
+    
     histogram = np.sum(binary_warped[:, :], axis=0)
-    # 在统计结果中找到左右最大的点的位置，作为左右车道检测的开始点
-    # 将统计结果一分为二，划分为左右两个部分，分别定位峰值位置，即为两条车道的搜索位置
+    
     midpoint = np.int(histogram.shape[0] / 2)
     leftx_base = np.argmax(histogram[:midpoint])
     rightx_base = np.argmax(histogram[midpoint:]) + midpoint
@@ -142,19 +139,15 @@ def cal_line_param(binary_warped):
     left_lane_inds = []
     right_lane_inds = []
 
-    # 遍历该副图像中的每一个窗口
+    
     for window in range(nwindows):
-        # 设置窗口的y的检测范围，因为图像是（行列）,shape[0]表示y方向的结果，上面是0
         win_y_low = binary_warped.shape[0] - (window + 1) * window_height
         win_y_high = binary_warped.shape[0] - window * window_height
-        # 左车道x的范围
         win_xleft_low = leftx_current - margin
         win_xleft_high = leftx_current + margin
-        # 右车道x的范围
         win_xright_low = rightx_current - margin
         win_xright_high = rightx_current + margin
 
-        # 确定非零点的位置x,y是否在搜索窗口中，将在搜索窗口内的x,y的索引存入left_lane_inds和right_lane_inds中
         good_left_inds = ((nonzeroy >= win_y_low) & (nonzeroy < win_y_high) &
                           (nonzerox >= win_xleft_low) & (nonzerox < win_xleft_high)).nonzero()[0]
         good_right_inds = ((nonzeroy >= win_y_low) & (nonzeroy < win_y_high) &
